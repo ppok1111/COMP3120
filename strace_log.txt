@@ -1,30 +1,30 @@
-("./a.out", ["./a.out"], [/* 73 vars */]) = 0
-brk(NULL)                               = 0x866000
+execve("./a.out", ["./a.out"], [/* 73 vars */]) = 0
+brk(NULL)                               = 0x21ab000
 access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
-mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6ad35f1000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f85c09a6000
 access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
 open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
 fstat(3, {st_mode=S_IFREG|0644, st_size=88579, ...}) = 0
-mmap(NULL, 88579, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f6ad35db000
+mmap(NULL, 88579, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f85c0990000
 close(3)                                = 0
 access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
 open("/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
 fstat(3, {st_mode=S_IFREG|0755, st_size=1868984, ...}) = 0
-mmap(NULL, 3971488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f6ad3004000
-mprotect(0x7f6ad31c4000, 2097152, PROT_NONE) = 0
-mmap(0x7f6ad33c4000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c0000) = 0x7f6ad33c4000
-mmap(0x7f6ad33ca000, 14752, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f6ad33ca000
+mmap(NULL, 3971488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f85c03b9000
+mprotect(0x7f85c0579000, 2097152, PROT_NONE) = 0
+mmap(0x7f85c0779000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c0000) = 0x7f85c0779000
+mmap(0x7f85c077f000, 14752, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f85c077f000
 close(3)                                = 0
-mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6ad35da000
-mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6ad35d9000
-mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6ad35d8000
-arch_prctl(ARCH_SET_FS, 0x7f6ad35d9700) = 0
-mprotect(0x7f6ad33c4000, 16384, PROT_READ) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f85c098f000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f85c098e000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f85c098d000
+arch_prctl(ARCH_SET_FS, 0x7f85c098e700) = 0
+mprotect(0x7f85c0779000, 16384, PROT_READ) = 0
 mprotect(0x600000, 4096, PROT_READ)     = 0
-mprotect(0x7f6ad35f3000, 4096, PROT_READ) = 0
-munmap(0x7f6ad35db000, 88579)           = 0
-syscall_332(0x7ffc04a5a4b8, 0x7ffc04a5a4c8, 0, 0x4005b0, 0x7f6ad33deab0, 0x400540) = -1 (errno 38)
+mprotect(0x7f85c09a8000, 4096, PROT_READ) = 0
+munmap(0x7f85c0990000, 88579)           = 0
+syscall_332(0x7ffe23e5b818, 0x7ffe23e5b828, 0, 0x4005b0, 0x7f85c0793ab0, 0x400540) = 0
 exit_group(0)                           = ?
 +++ exited with 0 +++
 
