@@ -1,7 +1,8 @@
 
 #include<stdio.h>
 #include<pthread.h>
-
+#include<time.h>
+#include<sys/time.h>
 #define MAX 9000000
 #define MULTI_THREAD 10
 #define USING_MUTEX_LOCK 1
@@ -15,10 +16,12 @@ int output;
 
 void main(){
 	int i;
+	struct timeval timeA, timeB;
 	int thread_number[MULTI_THREAD];
 	int totalsum = 0;
 	pthread_t p[MULTI_THREAD];
-
+	
+	gettimeofday(&timeA, NULL);
 	printf("count number is %d\n", MAX);
 	for(i=0; i< MULTI_THREAD; i++){
 		thread_number[i] = i;
@@ -30,7 +33,9 @@ void main(){
 		printf("thread%d is counted %d\n", i, totalcount[i]);
 		totalsum += totalcount[i];
 	}
+	gettimeofday(&timeB, NULL);
 	printf("total count is %d\n", totalsum);
+	printf("time : %.3fms\n",(timeB.tv_sec - timeA.tv_sec)*1000.0 + (timeB.tv_usec - timeA.tv_usec) * 0.001);
 }
 
 void *mythread(void *arg){
